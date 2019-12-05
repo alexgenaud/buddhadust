@@ -1,3 +1,5 @@
-resources/e-pub
-resources/pdf
-resources/zip
+.htaccess
+resources/download/
+resources/e-pub/
+resources/pdf/
+resources/zip/
