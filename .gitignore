@@ -1,4 +1,5 @@
 .htaccess
+resources/audios/
 resources/download/
 resources/e-pub/
 resources/pdf/
