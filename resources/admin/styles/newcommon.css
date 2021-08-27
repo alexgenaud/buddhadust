@@ -1,7 +1,7 @@
-﻿@charset "windows-1252";
+﻿@charset "utf-8";
 /* example: css_styles.default.htm */
 /* Page Last Updated */
-/* Wednesday, May 02, 2018 8:56 AM */
+/* Friday, March 26, 2021 4:39 AM */
 
 body {
     background: none repeat;
@@ -110,7 +110,7 @@ img {
    border: none;
    }
 
-p {font: 12pt/14pt "Times", "Times New Roman", serif;
+p {font: em "Times", "Times New Roman", serif;
    margin-top: 0;
    margin-bottom: 6px;
    }
@@ -118,29 +118,33 @@ p {font: 12pt/14pt "Times", "Times New Roman", serif;
 .f {
    font-family: "Times", "Times New Roman", serif;
 }
+.ftiny {
+   font: 0.25em "Times", "Times New Roman", serif;
+}
+
 .f1 {
-   font: 8pt/10pt "Times", "Times New Roman", serif;
+   font: 0.667em "Times", "Times New Roman", serif;
 }
 .f2 {
-   font: 10pt/12pt "Times", "Times New Roman", serif;
+   font: 0.833em "Times", "Times New Roman", serif;
 }
 .f3 {
-   font: 12pt/14pt "Times", "Times New Roman", serif;
+   font: 1em "Times", "Times New Roman", serif;
 }
 .f4 {
-   font: 14pt/18pt "Times", "Times New Roman", serif;
+   font: 1.1667em "Times", "Times New Roman", serif;
 }
 .f5 {
-   font: 18pt/24pt "Times", "Times New Roman", serif;
+   font: 1.4em "Times", "Times New Roman", serif;
 }
 .f6 {
-   font: 24pt/32pt "Times", "Times New Roman", serif;
+   font: 1.6em "Times", "Times New Roman", serif;
 }
 .f7 {
-   font: 36pt/48pt "Times", "Times New Roman", serif;
+   font: 2.01em "Times", "Times New Roman", serif;
 }
 .f8 {
-   font: 72pt/80pt "Times", "Times New Roman", serif;
+   font: 2.42em "Times", "Times New Roman", serif;
 }
 
 .mozp {
@@ -201,7 +205,7 @@ p.lgqt {
    margin-top: 0;
    margin-bottom: 6px;
    margin-right: +36px;
-   font: 12pt/14pt "Times", "Times New Roman", serif;
+   font: em "Times", "Times New Roman", serif;
    }
 
 .ctr {
@@ -240,14 +244,14 @@ p.lgqt {
 
 h1 {
    text-align: center;
-   font: bold 24pt/32pt "Times", "Times New Roman", serif;
+   font: bold 2em "Times", "Times New Roman", serif;
    color: #cc6600;
    background: none repeat;
    }
 
 h2 {
    text-align: center;
-   font: bold 24pt/32pt "Times", "Times New Roman", serif;
+   font: bold 2em "Times", "Times New Roman", serif;
    }
 
 h3 {
@@ -256,7 +260,7 @@ h3 {
    }
 
 h4 {
-   font: bold 14pt/16pt "Times", "Times New Roman", serif;
+   font: bold 1.1667em "Times", "Times New Roman", serif;
    background: none repeat;
    }
 
