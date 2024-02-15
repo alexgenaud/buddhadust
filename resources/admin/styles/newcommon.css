@@ -110,10 +110,14 @@ img {
    border: none;
    }
 
-p {font: em "Times", "Times New Roman", serif;
+p {font: 1em "Times", "Times New Roman", serif;
    margin-top: 0;
    margin-bottom: 6px;
    }
+
+.smc {
+	font-variant: small-caps;
+	}
 
 .f {
    font-family: "Times", "Times New Roman", serif;
