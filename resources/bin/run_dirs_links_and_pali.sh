@@ -1,14 +1,22 @@
 # cd obo_buddhadust
 # bash resources/bin/run_dirs_links_and_pali.sh &
 
-echo link and pali corrections
-ls -d [dit]*.htm backmatter dhammatalk dhamma-vinaya/bd dhamma-vinaya/pali frontmatter
-echo links only
-ls -d dhamma-vinaya/[^bp]* dhamma-vinaya/b[i-z]* dhamma-vinaya/pt*
-echo begin
+echo Pāli corrections
+ls -d [dit]*.htm backmatter dhammatalk frontmatter
+ls -d dhamma-vinaya/bd dhamma-vinaya/pali
+echo Specific english and links corrections
+ls -d [dit]*.htm backmatter dhamma* frontmatter
 
-find [dit]*.htm backmatter dhammatalk dhamma-vinaya/bd dhamma-vinaya/pali frontmatter \
-  -type f \( -name "*.htm" -o -name "*.txt" \) -exec bash resources/bin/run_file_link_pali.sh {} \;
+RUN_PALI=resources/bin/run_file_pali.sh
+find [dit]*.htm backmatter dhammatalk frontmatter \
+  -type f \( -name "*.htm" -o -name "*.txt" \) | xargs -n 100 bash "$RUN_PALI"
+find dhamma-vinaya/bd dhamma-vinaya/pali \
+  -type f \( -name "*.htm" -o -name "*.txt" \) | xargs -n 100 bash "$RUN_PALI"
 
-find dhamma-vinaya/[^bp]* dhamma-vinaya/b[i-z]* dhamma-vinaya/pt* \
-  -type f \( -name "*.htm" -o -name "*.txt" \) -exec bash resources/bin/run_file_link.sh {} \;
+RUN_ENGL=resources/bin/run_file_english.sh
+find [dit]*.htm backmatter dhamma* frontmatter \
+  -type f \( -name "*.htm" -o -name "*.txt" \) | xargs -n 100 bash "$RUN_ENGL"
+
+RUN_LINK=resources/bin/run_file_link.sh
+find [dit]*.htm backmatter dhamma* frontmatter \
+  -type f \( -name "*.htm" -o -name "*.txt" \) | xargs -n 100 bash "$RUN_LINK"

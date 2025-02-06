@@ -1,3 +1,5 @@
+# Helpful tool on macosx that converts ped.htm to ped.txt
+# textutil -convert txt ped.htm
 PED_PATH="backmatter/glossology/ped/pts_ped/ped.htm"
 
 RE_ZKEY='[a-y][0-4][a-z0-6-]*'
