@@ -58,3 +58,6 @@ grep "^<p.*>:: " $PED_PATH | sed -E 's_.*>:: ([^/]*)/.*_\1_' | sed 's:<sup>:/:g'
 
 echo "Unexpected PED Entry characters to z sort key"
 grep "^<p.*>:: " $PED_PATH | tr '[:upper:]' '[:lower:]' | sed -E -e 's_.*>:: ([^/]*)/.*_\1_' -e 's:<sup>:/:g' -e "s:[<,].*::" -e 's:[\(\)° -]::g' -e 's:([a-y]):\11:g' -e 's:ā:a2:g' -e 's:ī:i2:g' -e 's:ū:u2:g' -e 's:ḍ:d2:g' -e 's:ṭ:t2:g' -e 's:ḷ:l2:g' -e 's:[ṁṃ]:m2:g' -e 's:ṇ:n2:g' -e 's:ṅ:n3:g' -e 's:ñ:n4:g' | grep "[^a-z/0-9]"
+
+echo "Unexpected _~m id"
+grep -r "id=.x[^\"][~_]m" [a-q]*

@@ -18,12 +18,19 @@ for FILE in "$@"; do
   TMPFILE=$(mktemp)
 
   if sed -E \
-    -e "s:[ṆÑ]K:ṄK:g" -e "s:[ṇñ]k:ṅk:g" -e "s:[ṆÑ]G:ṄG:g" -e "s:[ṇñ]g:ṅg:g" \
-    -e "s:[ṆṄ]C:ÑC:g" -e "s:[ṇṅ]c:ñc:g" -e "s:[ṆṄ]J:ÑJ:g" -e "s:[ṇṅ]j:ñj:g" \
-    -e "s:[ṄÑ]Ḍ:ṆḌ:g" -e "s:[ṅñ]ḍ:ṇḍ:g" -e "s:[ṄÑ]Ṭ:ṆṬ:g" -e "s:[ṅñ]ṭ:ṇṭ:g" \
-    -e "s:[ṂṀ]K:ṄK:g" -e "s:[ṃṁ]k:ṅk:g" -e "s:[ṂṀ]G:ṄG:g" -e "s:[ṃṁ]g:ṅg:g" \
-    -e "s:[ṂṀ]C:ÑC:g" -e "s:[ṃṁ]c:ñc:g" -e "s:[ṂṀ]J:ÑJ:g" -e "s:[ṃṁ]j:ñj:g" \
-    -e "s:[ṂṀ]Ḍ:ṆḌ:g" -e "s:[ṃṁ]ḍ:ṇḍ:g" -e "s:[ṂṀ]Ṭ:ṆṬ:g" -e "s:[ṃṁ]ṭ:ṇṭ:g" \
+    -e "s:([Ss])er.n[ti]*y:\1erenity:g" \
+    -e "s:[_~][nm]k:-nk:g" -e "s:[_~][nm]g:-ng:g" \
+    -e "s:[_-][nm]c:~nc:g" -e "s:[_-][nm]j:~nj:g" \
+    -e "s:[-~][nm]_d:_n_d:g" -e "s:[-~][nm]_t:_n_t:g" \
+    -e "s:/by.nc/:/by-nc/:g" -e "s:/by.nc.nd/:/by-nc-nd/:g" \
+    -e "s:cc.by.nc.png:cc_by_nc.png:g" \
+    -e "s:[ⱮṂ]:Ṁ:g" -e "s:[ɱṃ]:ṁ:g" \
+    -e "s:[ṆÑṀ]K:ṄK:g" -e "s:[ṇñṁ]k:ṅk:g" \
+    -e "s:[ṆÑṀ]G:ṄG:g" -e "s:[ṇñṁ]g:ṅg:g" \
+    -e "s:[ṆṄṀ]C:ÑC:g" -e "s:[ṇṅṁ]c:ñc:g" \
+    -e "s:[ṆṄṀ]J:ÑJ:g" -e "s:[ṇṅṁ]j:ñj:g" \
+    -e "s:[ṄÑṀ]Ḍ:ṆḌ:g" -e "s:[ṅñṁ]ḍ:ṇḍ:g" \
+    -e "s:[ṄÑṀ]Ṭ:ṆṬ:g" -e "s:[ṅñṁ]ṭ:ṇṭ:g" \
     "$FILE" >"$TMPFILE"; then
     mv "$TMPFILE" "$FILE"
   else

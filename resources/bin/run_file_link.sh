@@ -18,13 +18,11 @@ for FILE in "$@"; do
   TMPFILE=$(mktemp)
 
   if sed -E \
-    -e "s:[_~]nk:-nk:g" -e "s:[_~]ng:-ng:g" \
-    -e "s:[_-]nc:~nc:g" -e "s:[_-]nj:~nj:g" \
-    -e "s:[-~]n_d:_n_d:g" -e "s:[-~]n_t:_n_t:g" \
+    -e "s:[_~-]m:-m:g" \
+    -e "s:[_~][nm]k:-nk:g" -e "s:[_~][nm]g:-ng:g" \
+    -e "s:[_-][nm]c:~nc:g" -e "s:[_-][nm]j:~nj:g" \
+    -e "s:[-~][nm]_d:_n_d:g" -e "s:[-~][nm]_t:_n_t:g" \
     -e "s:/by.nc/:/by-nc/:g" -e "s:/by.nc.nd/:/by-nc-nd/:g" -e "s:cc.by.nc.png:cc_by_nc.png:g" \
-    -e "s:[_~-]mk:-nk:g" -e "s:[_~-]mg:-ng:g" \
-    -e "s:[_~-]mc:~nc:g" -e "s:[_~-]mj:~nj:g" \
-    -e "s:[_~-]m_d:_n_d:g" -e "s:[_~-]m_t:_n_t:g" \
     "$FILE" >"$TMPFILE"; then
     mv "$TMPFILE" "$FILE"
   else
