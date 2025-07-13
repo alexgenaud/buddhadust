@@ -43,7 +43,7 @@ div.inbdr {
 
 div.inback {
 	border: solid 1px #cc6600;
-	background-color: #f7ecda;
+	background-color: #ffa64d;
 	padding: 12px;
 	margin-left: auto;
 	margin-right: auto;
@@ -85,7 +85,7 @@ div.translit {
 	margin-right: auto;
 	font: 10pt/12pt "Times", "Times New Roman", serif;	
 	border: solid 1px #cc6600;
-	background-color: #f7ecda;
+	background-color: #ffa64d;
 	padding: 6px;
 	text-align: center;
 	}
@@ -304,7 +304,7 @@ h6 {
 }
 
 .bc {
-   color: #f7e6ce;
+   color: #ffa64d;
    background: none repeat;
 }
 
@@ -479,47 +479,47 @@ table.ltb {
 }
 
 tr.ltb {
-   background: #f7e6ce;
+   background: #ffa64d;
    border: #cc6600 solid 1px;
 }
 
 th.ltb {
-   background: #f7e6ce;
+   background: #ffa64d;
    border: #cc6600 solid 1px;
 }
 td.ltb {
-   background: #f7e6ce;
+   background: #ffa64d;
    border: #cc6600 solid 1px;
 }
 
 table.ltbdr {
 	background: none repeat;
-   border: #f7e6ce solid 1px;
+   border: #ffa64d solid 1px;
 }
 
 tr.ltbdr {
    background: none repeat;
-   border: #f7e6ce solid 1px;
+   border: #ffa64d solid 1px;
 }
 
 th.ltbdr {
    background: none repeat;
-   border: #f7e6ce solid 1px;
+   border: #ffa64d solid 1px;
 }
 
 td.ltbdr {
    background: none repeat;
-   border: #f7e6ce solid 1px;
+   border: #ffa64d solid 1px;
 }
 
 td.nbdltbg {
-   background: #f7e6ce;
+   background: #ffa64d;
 }
 
 table.cvp {
    border-collapse: collapse;
    border: 1px solid #cc6600;
-   background: #f7e6ce;
+   background: #ffa64d;
    empty-cells: show;
    }
 
@@ -540,7 +540,7 @@ table.cvp th {
    text-align: center;
    font-weight: bold;
    color: #cc6600;
-   background: #f7e6ce;
+   background: #ffa64d;
    vertical-align: middle;
    }
 
